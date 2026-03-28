@@ -1,0 +1,31 @@
+:root {
+  --font-heading: "Sora", sans-serif;
+  --font-body: "Space Grotesk", sans-serif;
+
+  --bg-0: #f3f6fb;
+  --bg-1: #dce7f4;
+  --ink-0: #0f1727;
+  --ink-1: #2d3b55;
+  --ink-soft: #556785;
+
+  --accent-0: #0f766e;
+  --accent-1: #f59e0b;
+  --accent-2: #0b4ba8;
+
+  --glass-bg: rgba(255, 255, 255, 0.38);
+  --glass-stroke: rgba(255, 255, 255, 0.8);
+  --glass-shadow: 0 20px 40px rgba(15, 23, 39, 0.12);
+
+  --radius-xl: 24px;
+  --radius-md: 14px;
+
+  --space-1: 0.5rem;
+  --space-2: 0.75rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --space-6: 3rem;
+  --space-7: 5rem;
+
+  --shell: min(1120px, calc(100vw - 2rem));
+}

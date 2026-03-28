@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canh Buom Xanh | Teacher Public</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/tokens.css" />
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="./assets/css/components.css" />
+    <link rel="stylesheet" href="./assets/css/pages/teacher.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="./index.html">Canh Buom Xanh</a>
+      <nav class="topnav">
+        <a href="./index.html">Home</a>
+        <a href="./forum.html">Forum</a>
+        <a href="./teacher.html" aria-current="page">Teacher</a>
+        <a href="./profile.html">Profile</a>
+        <a href="./auth.html">Auth</a>
+        <a href="./voting.html">Voting</a>
+      </nav>
+    </header>
+
+    <main class="shell teacher-main">
+      <section class="lookup-row glass-card">
+        <input id="teacherIdInput" type="number" min="1" placeholder="Nhap teacher id de xem chi tiet" />
+        <button id="teacherLookupBtn" class="btn btn-primary" type="button">Xem ho so</button>
+      </section>
+
+      <section id="teacherList" class="teacher-grid"></section>
+      <section id="teacherDetail" class="glass-card teacher-detail"></section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./assets/js/api.js"></script>
+    <script src="./assets/js/teacher.js"></script>
+  </body>
+</html>

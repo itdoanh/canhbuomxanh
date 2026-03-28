@@ -1,0 +1,45 @@
+.auth-main {
+  padding-top: var(--space-6);
+  padding-bottom: var(--space-7);
+}
+
+.auth-grid {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.auth-card {
+  padding: var(--space-4);
+}
+
+.auth-card form {
+  margin-top: var(--space-3);
+  display: grid;
+  gap: var(--space-2);
+}
+
+.auth-card input,
+.auth-card select {
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(45, 59, 85, 0.2);
+  padding: 0.75rem 0.8rem;
+  font-family: var(--font-body);
+}
+
+.auth-note {
+  margin-top: var(--space-3);
+  color: var(--ink-soft);
+}
+
+.status-line {
+  margin-top: var(--space-3);
+  color: var(--accent-2);
+  font-weight: 600;
+}
+
+@media (max-width: 860px) {
+  .auth-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,71 @@
+.voting-main {
+  padding-top: var(--space-6);
+  padding-bottom: var(--space-7);
+}
+
+.grid-two {
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.lower {
+  margin-top: var(--space-3);
+}
+
+.pane {
+  padding: var(--space-4);
+}
+
+.stack-form {
+  margin-top: var(--space-2);
+  display: grid;
+  gap: var(--space-2);
+}
+
+.stack-form input,
+.stack-form textarea,
+.stack-form select,
+.inline-form input {
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(45, 59, 85, 0.2);
+  padding: 0.75rem 0.8rem;
+  font-family: var(--font-body);
+}
+
+.status-line {
+  margin-top: var(--space-3);
+  color: var(--accent-2);
+  font-weight: 600;
+  min-height: 1.2rem;
+}
+
+.summary-pane {
+  margin-top: var(--space-3);
+}
+
+.inline-form {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+#summaryOutput {
+  margin-top: var(--space-3);
+  background: rgba(15, 23, 39, 0.85);
+  color: #dff6ff;
+  border-radius: 14px;
+  padding: 0.9rem;
+  font-size: 0.84rem;
+  overflow-x: auto;
+}
+
+@media (max-width: 900px) {
+  .grid-two {
+    grid-template-columns: 1fr;
+  }
+
+  .inline-form {
+    flex-direction: column;
+  }
+}

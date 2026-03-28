@@ -1,0 +1,11 @@
+# term,severity,category
+boi_nho,4,defamation
+xuc_pham,3,abuse
+ha_nhoc,3,abuse
+doa_nat,5,threat
+sap_dat_vote,4,manipulation
+ep_vote,5,coercion
+so_sanh_doc_hai,2,toxic_compare
+tan_cong_ca_nhan,4,harassment
+lang_ma,3,abuse
+vu_khong,5,defamation

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canh Buom Xanh | Moderator Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/tokens.css" />
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="./assets/css/components.css" />
+    <link rel="stylesheet" href="./assets/css/pages/portal.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="./index.html">Canh Buom Xanh</a>
+      <nav class="topnav">
+        <a href="./index.html">Home</a>
+        <a href="./teacher-portal.html">Teacher Portal</a>
+        <a href="./moderator.html" aria-current="page">Moderator</a>
+        <a href="./admin.html">Admin</a>
+        <a href="./aiops.html">AIOps</a>
+        <a href="./auth.html">Auth</a>
+      </nav>
+    </header>
+
+    <main class="shell portal-main">
+      <section class="grid-two">
+        <article class="glass-card pane">
+          <h2>AI Queue (Enriched)</h2>
+          <button id="loadAIQueue" class="btn btn-primary" type="button">Load enriched queue</button>
+          <pre id="aiQueueOutput">No data</pre>
+        </article>
+
+        <article class="glass-card pane">
+          <h2>Appeal Queue</h2>
+          <button id="loadAppeals" class="btn btn-primary" type="button">Load open appeals</button>
+          <pre id="appealQueueOutput">No data</pre>
+        </article>
+      </section>
+
+      <section class="grid-two lower">
+        <article class="glass-card pane">
+          <h2>Review Appeal</h2>
+          <form id="reviewAppealForm" class="stack-form">
+            <input type="number" name="appealId" min="1" placeholder="Appeal ID" required />
+            <select name="action">
+              <option value="accept">accept</option>
+              <option value="reject">reject</option>
+            </select>
+            <button class="btn btn-ghost" type="submit">Submit review</button>
+          </form>
+          <p id="reviewAppealMsg" class="status-line"></p>
+        </article>
+
+        <article class="glass-card pane">
+          <h2>Violation Action</h2>
+          <form id="violationForm" class="stack-form">
+            <input type="number" name="userId" min="1" placeholder="User ID" required />
+            <select name="action">
+              <option value="warn">warn</option>
+              <option value="suspend">suspend</option>
+              <option value="ban">ban</option>
+            </select>
+            <button class="btn btn-ghost" type="submit">Apply action</button>
+          </form>
+          <p id="violationMsg" class="status-line"></p>
+        </article>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./assets/js/api.js"></script>
+    <script src="./assets/js/moderator.js"></script>
+  </body>
+</html>

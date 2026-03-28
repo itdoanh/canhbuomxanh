@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canh Buom Xanh | Forum</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/tokens.css" />
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="./assets/css/components.css" />
+    <link rel="stylesheet" href="./assets/css/pages/forum.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="./index.html">Canh Buom Xanh</a>
+      <nav class="topnav">
+        <a href="./index.html">Home</a>
+        <a href="./forum.html" aria-current="page">Forum</a>
+        <a href="./teacher.html">Teacher</a>
+        <a href="./profile.html">Profile</a>
+        <a href="./auth.html">Auth</a>
+        <a href="./voting.html">Voting</a>
+      </nav>
+    </header>
+
+    <main class="shell forum-main">
+      <section class="glass-card compose-card">
+        <h2>Tao bai viet</h2>
+        <form id="postForm" class="stack-form">
+          <input type="text" name="title" placeholder="Tieu de" required />
+          <input type="number" name="teacherId" placeholder="Teacher ID (optional)" min="1" />
+          <textarea name="body" rows="4" placeholder="Noi dung" required></textarea>
+          <button class="btn btn-primary" type="submit">Dang bai</button>
+        </form>
+        <p id="postMessage" class="status-line"></p>
+      </section>
+
+      <section id="postsContainer" class="posts-list"></section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./assets/js/api.js"></script>
+    <script src="./assets/js/forum.js"></script>
+  </body>
+</html>

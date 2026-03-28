@@ -1,0 +1,33 @@
+.profile-main {
+  padding-top: var(--space-6);
+  padding-bottom: var(--space-7);
+  display: grid;
+  gap: var(--space-4);
+}
+
+.profile-card,
+.profile-edit {
+  padding: var(--space-4);
+}
+
+.profile-edit h2 {
+  margin-bottom: var(--space-2);
+}
+
+.stack-form {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.stack-form input {
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(45, 59, 85, 0.2);
+  padding: 0.75rem 0.8rem;
+  font-family: var(--font-body);
+}
+
+.status-line {
+  margin-top: var(--space-3);
+  color: var(--accent-2);
+  font-weight: 600;
+}

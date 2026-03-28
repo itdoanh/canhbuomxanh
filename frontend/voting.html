@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canh Buom Xanh | Voting Engine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/tokens.css" />
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="./assets/css/components.css" />
+    <link rel="stylesheet" href="./assets/css/pages/voting.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="./index.html">Canh Buom Xanh</a>
+      <nav class="topnav">
+        <a href="./index.html">Home</a>
+        <a href="./honor.html">Vinh Danh</a>
+        <a href="./forum.html">Forum</a>
+        <a href="./teacher.html">Teacher</a>
+        <a href="./profile.html">Profile</a>
+        <a href="./auth.html">Auth</a>
+        <a href="./voting.html" aria-current="page">Voting</a>
+      </nav>
+    </header>
+
+    <main class="shell voting-main">
+      <section class="grid-two">
+        <article class="glass-card pane">
+          <h2>Cast Vote</h2>
+          <form id="voteForm" class="stack-form">
+            <input type="number" name="teacherId" min="1" placeholder="Teacher ID" required />
+            <input type="number" name="rawScore" min="1" max="5" placeholder="Raw score 1-5" required />
+            <input type="text" name="semesterKey" placeholder="Semester key ex: 2026S1" required />
+            <select name="voteMode">
+              <option value="normal">normal</option>
+              <option value="ghost">ghost</option>
+            </select>
+            <button class="btn btn-primary" type="submit">Gui vote</button>
+          </form>
+          <p id="voteMessage" class="status-line"></p>
+        </article>
+
+        <article class="glass-card pane">
+          <h2>Forced Vote Alarm</h2>
+          <form id="alertForm" class="stack-form">
+            <input type="number" name="teacherId" min="1" placeholder="Teacher ID" required />
+            <textarea name="detail" rows="3" placeholder="Mo ta tinh huong ep vote"></textarea>
+            <button class="btn btn-ghost" type="submit">Gui alarm</button>
+          </form>
+          <p id="alertMessage" class="status-line"></p>
+        </article>
+      </section>
+
+      <section class="grid-two lower">
+        <article class="glass-card pane">
+          <h2>Release Semester Votes</h2>
+          <form id="releaseForm" class="stack-form">
+            <input type="text" name="semesterKey" placeholder="Semester key ex: 2026S1" required />
+            <button class="btn btn-primary" type="submit">Release pending votes</button>
+          </form>
+          <p id="releaseMessage" class="status-line"></p>
+        </article>
+
+        <article class="glass-card pane">
+          <h2>Recompute Badges</h2>
+          <form id="recomputeForm" class="stack-form">
+            <input type="number" name="teacherId" min="1" placeholder="Teacher ID (optional)" />
+            <button class="btn btn-primary" type="submit">Recompute badge engine</button>
+          </form>
+          <p id="recomputeMessage" class="status-line"></p>
+        </article>
+      </section>
+
+      <section class="glass-card pane summary-pane">
+        <h2>Teacher Badge Summary</h2>
+        <form id="summaryForm" class="inline-form">
+          <input type="number" name="teacherId" min="1" placeholder="Teacher ID" required />
+          <button class="btn btn-ghost" type="submit">Tai summary</button>
+        </form>
+        <pre id="summaryOutput">No data</pre>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./assets/js/api.js"></script>
+    <script src="./assets/js/voting.js"></script>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canh Buom Xanh | Admin Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/tokens.css" />
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="./assets/css/components.css" />
+    <link rel="stylesheet" href="./assets/css/pages/portal.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="./index.html">Canh Buom Xanh</a>
+      <nav class="topnav">
+        <a href="./index.html">Home</a>
+        <a href="./teacher-portal.html">Teacher Portal</a>
+        <a href="./moderator.html">Moderator</a>
+        <a href="./admin.html" aria-current="page">Admin</a>
+        <a href="./aiops.html">AIOps</a>
+        <a href="./auth.html">Auth</a>
+      </nav>
+    </header>
+
+    <main class="shell portal-main">
+      <section class="grid-two">
+        <article class="glass-card pane">
+          <h2>System Overview</h2>
+          <button id="loadSystemOverview" class="btn btn-primary" type="button">Load overview</button>
+          <pre id="systemOverviewOutput">No data</pre>
+          <button id="loadSpamSignals" class="btn btn-ghost" type="button">Load spam vote signals</button>
+          <pre id="spamSignalsOutput">No data</pre>
+        </article>
+
+        <article class="glass-card pane">
+          <h2>AIOps Config</h2>
+          <button id="getAIOpsConfig" class="btn btn-ghost" type="button">Get current config</button>
+          <pre id="aiopsConfigOutput">No data</pre>
+          <form id="updateAIOpsForm" class="stack-form">
+            <input type="text" name="keywordsCsv" placeholder="keyword1,keyword2" />
+            <input type="number" step="0.1" min="0.1" name="suggestWeight" placeholder="suggestWeight" />
+            <button class="btn btn-primary" type="submit">Update config</button>
+          </form>
+          <p id="aiopsMsg" class="status-line"></p>
+        </article>
+      </section>
+
+      <section class="glass-card pane lower">
+        <h2>Access Control</h2>
+        <form id="roleForm" class="inline-form">
+          <input type="number" name="userId" min="1" placeholder="User ID" required />
+          <input type="text" name="role" placeholder="Role (admin/moderator/teacher/...)" required />
+          <button class="btn btn-ghost" type="submit">Update role</button>
+        </form>
+        <p id="roleMsg" class="status-line"></p>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./assets/js/api.js"></script>
+    <script src="./assets/js/admin.js"></script>
+  </body>
+</html>

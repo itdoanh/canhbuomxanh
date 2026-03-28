@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canh Buom Xanh | Vinh Danh</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/themes/odometer-theme-default.min.css" />
+    <link rel="stylesheet" href="./assets/css/tokens.css" />
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="./assets/css/components.css" />
+    <link rel="stylesheet" href="./assets/css/pages/honor.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-a"></div>
+    <div class="ambient ambient-c"></div>
+
+    <header class="topbar">
+      <a class="brand" href="./index.html">Canh Buom Xanh</a>
+      <nav class="topnav">
+        <a href="./index.html">Home</a>
+        <a href="./honor.html" aria-current="page">Vinh Danh</a>
+        <a href="./forum.html">Forum</a>
+        <a href="./teacher.html">Teacher</a>
+        <a href="./profile.html">Profile</a>
+        <a href="./auth.html">Auth</a>
+        <a href="./voting.html">Voting</a>
+        <a href="./teacher-portal.html">Teacher Portal</a>
+        <a href="./moderator.html">Moderator</a>
+        <a href="./admin.html">Admin</a>
+      </nav>
+    </header>
+
+    <main class="shell honor-main">
+      <section class="honor-head">
+        <p class="kicker">Badge Milestones</p>
+        <h1>Trang Vinh Danh theo moc diem, khong theo top doi khang.</h1>
+      </section>
+
+      <section class="stats-strip">
+        <article class="stat-card glass-card">
+          <h3>Ho so da claim</h3>
+          <div class="odometer" id="claimedCount">0</div>
+        </article>
+        <article class="stat-card glass-card">
+          <h3>Luot vote hop le</h3>
+          <div class="odometer" id="votesCount">0</div>
+        </article>
+        <article class="stat-card glass-card">
+          <h3>Noi dung bi gan co</h3>
+          <div class="odometer" id="flagsCount">0</div>
+        </article>
+      </section>
+
+      <section class="badge-grid">
+        <article class="badge-card glass-card tilt-card">
+          <p class="badge-tag">Bac</p>
+          <h3>Canh Buom Bac</h3>
+          <p>Dat nguong danh gia ben vung va on dinh theo hoc ky.</p>
+        </article>
+        <article class="badge-card glass-card tilt-card">
+          <p class="badge-tag">Vang</p>
+          <h3>Canh Buom Vang</h3>
+          <p>Ghi nhan dong gop xuat sac va nhat quan qua nhieu ky.</p>
+        </article>
+        <article class="badge-card glass-card tilt-card">
+          <p class="badge-tag">Danh du</p>
+          <h3>Nha giao kien tao</h3>
+          <p>Moc dac biet cho tac dong giao duc tich cuc va an toan.</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/odometer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/honor.js"></script>
+  </body>
+</html>

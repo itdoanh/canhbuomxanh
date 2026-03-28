@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canh Buom Xanh | Auth</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/tokens.css" />
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="./assets/css/components.css" />
+    <link rel="stylesheet" href="./assets/css/pages/auth.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="./index.html">Canh Buom Xanh</a>
+      <nav class="topnav">
+        <a href="./index.html">Home</a>
+        <a href="./forum.html">Forum</a>
+        <a href="./teacher.html">Teacher</a>
+        <a href="./profile.html">Profile</a>
+        <a href="./auth.html" aria-current="page">Auth</a>
+        <a href="./voting.html">Voting</a>
+      </nav>
+    </header>
+
+    <main class="shell auth-main">
+      <section class="auth-grid">
+        <article class="glass-card auth-card">
+          <h2>Dang ky</h2>
+          <form id="registerForm">
+            <input type="text" name="fullName" placeholder="Full name" required />
+            <input type="email" name="email" placeholder="Email" required />
+            <input type="password" name="password" placeholder="Password" required />
+            <select name="role" required>
+              <option value="student_current">student_current</option>
+              <option value="student_alumni">student_alumni</option>
+              <option value="parent">parent</option>
+            </select>
+            <button class="btn btn-primary" type="submit">Tao tai khoan</button>
+          </form>
+        </article>
+
+        <article class="glass-card auth-card">
+          <h2>Dang nhap</h2>
+          <form id="loginForm">
+            <input type="email" name="email" placeholder="Email" required />
+            <input type="password" name="password" placeholder="Password" required />
+            <button class="btn btn-primary" type="submit">Dang nhap</button>
+          </form>
+          <p class="auth-note">Token duoc luu trong localStorage cho flow Part D.</p>
+        </article>
+      </section>
+
+      <p id="authMessage" class="status-line"></p>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./assets/js/api.js"></script>
+    <script src="./assets/js/auth.js"></script>
+  </body>
+</html>

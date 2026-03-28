@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canh Buom Xanh | Internal AIOps</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/tokens.css" />
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="./assets/css/components.css" />
+    <link rel="stylesheet" href="./assets/css/pages/portal.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="./index.html">Canh Buom Xanh</a>
+      <nav class="topnav">
+        <a href="./index.html">Home</a>
+        <a href="./teacher-portal.html">Teacher Portal</a>
+        <a href="./moderator.html">Moderator</a>
+        <a href="./admin.html">Admin</a>
+        <a href="./aiops.html" aria-current="page">AIOps</a>
+        <a href="./auth.html">Auth</a>
+      </nav>
+    </header>
+
+    <main class="shell portal-main">
+      <section class="grid-two">
+        <article class="glass-card pane">
+          <h2>Lexicon Operations</h2>
+          <button id="reloadLexicon" class="btn btn-primary" type="button">Reload lexicon file</button>
+          <button id="summaryLexicon" class="btn btn-ghost" type="button">Get lexicon summary</button>
+          <pre id="lexiconOutput">No data</pre>
+        </article>
+
+        <article class="glass-card pane">
+          <h2>Analyze Text</h2>
+          <form id="analyzeForm" class="stack-form">
+            <textarea name="text" rows="5" placeholder="Nhap noi dung can phan tich" required></textarea>
+            <button class="btn btn-primary" type="submit">Analyze only</button>
+          </form>
+          <p id="analyzeMsg" class="status-line"></p>
+          <pre id="analyzeOutput">No data</pre>
+        </article>
+      </section>
+
+      <section class="grid-two lower">
+        <article class="glass-card pane">
+          <h2>Analyze and Handoff</h2>
+          <form id="analyzeFlagForm" class="stack-form">
+            <select name="sourceType">
+              <option value="post">post</option>
+              <option value="comment">comment</option>
+              <option value="teacher_profile">teacher_profile</option>
+            </select>
+            <input type="number" name="sourceId" min="1" placeholder="Source ID" required />
+            <textarea name="text" rows="4" placeholder="Noi dung can phan tich + handoff" required></textarea>
+            <button class="btn btn-primary" type="submit">Analyze and flag</button>
+          </form>
+          <p id="analyzeFlagMsg" class="status-line"></p>
+          <pre id="analyzeFlagOutput">No data</pre>
+        </article>
+
+        <article class="glass-card pane">
+          <h2>Moderator Handoff Queue</h2>
+          <button id="loadEnrichedQueue" class="btn btn-ghost" type="button">Load enriched queue</button>
+          <pre id="enrichedQueueOutput">No data</pre>
+        </article>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./assets/js/api.js"></script>
+    <script src="./assets/js/aiops.js"></script>
+  </body>
+</html>
